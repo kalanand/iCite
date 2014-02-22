@@ -55,9 +55,9 @@ def getHindex(ref):
     query = 'p=' + ref
     weburl = 'http://inspirehep.net/search?'
     ## Need to filter papers that are published
-    ## Take into account subtlties for PDG, GEANT, Pythia, CTEQ, LEP 
+    ## Take into account subtlties for PDG, GEANT, Pythia, CTEQ 
     filter = '+and+eprint+arxiv'
-    if ('Particle' in ref or 'GEANT' in ref or 'FERMILAB' in ref or 'cteq' in ref or 'ALEPH' in ref):
+    if ('Particle' in ref or 'GEANT' in ref or 'FERMILAB' in ref or 'cteq' in ref):
        filter = ''
     if not ('Particle' in ref or 'GEANT' in ref or 'FERMILAB' in ref): 
 	   filter = filter + '+and+tc+p'
