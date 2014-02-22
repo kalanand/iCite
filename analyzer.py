@@ -53,7 +53,16 @@ from plotter import *
 
 def getHindex(ref):
     query = 'p=' + ref
-    Hindex = urllib.urlopen('http://inspirehep.net/search?' + query + '&of=hcs').read()
+    weburl = 'http://inspirehep.net/search?'
+    ## Need to filter papers that are published
+    ## Take into account subtlties for PDG, GEANT, Pythia, CTEQ, LEP 
+    filter = '+and+eprint+arxiv'
+    if ('Particle' in ref or 'GEANT' in ref or 'FERMILAB' in ref or 'cteq' in ref or 'ALEPH' in ref):
+       filter = ''
+    if not ('Particle' in ref or 'GEANT' in ref or 'FERMILAB' in ref): 
+	   filter = filter + '+and+tc+p'
+    filter = filter + '&of=hcs'
+    Hindex = urllib.urlopen(weburl + query + filter).read()
 
     if 'No records' in Hindex :
         return "no records found in INSPIRE, please try again"
