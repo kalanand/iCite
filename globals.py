@@ -21,7 +21,8 @@ groups = {
     'telescopes': 'Telescopes', 
     'darkenergy': 'Dark energy experiments', 
     'tools':      'HEP tools', 
-    'simulation': 'MC simulation'
+    'simulation': 'MC simulation',
+    'PAGs'      : 'CMS Physics groups'
 }
 
 
@@ -110,5 +111,19 @@ simulation = { ## Simulation##
     "POWHEG":   'a+P.Nason.1+and+t+powheg',
     "MadGraph": 't+madgraph+or+t+madevent'
 }
+
+
+PAGs = { ## CMS Physics groups ##
+    "Std Mod": 'collaboration:\'CMS\'+and+(r+SMP+or+r+EWK+or+eprint+arxiv:1204.3170+or+eprint+arxiv:1311.6141+or+eprint+arxiv:1304.7498+or+eprint+arxiv:1212.6660+or+eprint+arxiv:1110.6461+or+eprint+arxiv:1108.2044+or+eprint+arxiv:1106.0647+or+eprint+arxiv:1106.0208+or+eprint+arxiv:1104.1693+or+eprint+arxiv:1102.2020+or+eprint+arxiv:1102.0068+or+eprint+arxiv:1101.5029)',
+    "Higgs":   'collaboration:\'CMS\'+and+r+HIG',
+    "Exotics":  'collaboration:\'CMS\'+and+(r+EXO+or+r+B2G)',
+    "SUSY":   'collaboration:\'CMS\'+and+r+SUS',
+    "Forwd phys":   'collaboration:\'CMS\'+and+(r+FSQ+or+r+FWD+or+eprint+arXiv:1305.6016+or+eprint+arXiv:1204.1411+or+eprint+arXiv:1104.3547+or+eprint+arXiv:1009.4122+or+eprint+arXiv:1102.0068+or+eprint+arXiv:1107.0330+or+eprint+arXiv:1102.4282+or+eprint+arXiv:1011.5531+or+eprint+arXiv:1006.2083+or+eprint+arXiv:1005.3299+or+eprint+arXiv:1101.3518+or+eprint+arXiv:1005.3294+or+eprint+arXiv:1002.0621)', 
+    "Top":   'collaboration:\'CMS\'+and+r+TOP',
+    "Flavor phys":   'collaboration:\'CMS\'+and+r+BPH',
+    "Heavy ion":   'collaboration:\'CMS\'+and+r+HIN', 
+    "Phys obj":'collaboration:\'CMS\'+and+(r+JME+or+r+EGM+or+r+BTV+or+r+TRK+or+r+MUO+or+r+PFT+or+r+LUM)' 
+}
+
 
 
